@@ -29,7 +29,8 @@ $(document).ready(function (){
             var lat = results.coord.lat
             var lon = results.coord.lon
             
-            //function for displaying searched cities
+            //function for displaying and logging searched cities
+            //Still not able to render the array of cities...
             function renderButtons(){
                 $('#cities').empty();
                 for (var index = 0; index < cities.length; index++) {
