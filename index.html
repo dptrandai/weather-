@@ -4,31 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./script.js"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <header>Weather Dashboard</header>
-    <div id="container">
-
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Fluid jumbotron</h1>
-              <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-            </div>
+  <header>Weather Dashboard</header>
+      <!-- main div for all the data weather for searched city -->
+      <div id="mainDiv">
+        <div id="cityName"></div>
+        <div class="temp"></div>
+        <div id="windSpeedDiv"></div>
+        <div id="humidDiv"></div>
+        <div id="uvDiv"></div>
+      </div>
+      <!--Input area for city search-->
+  <form id="weatherForm">
+    <label for="cityInput">Search for a city</label>
+    <input type="text" id="cityInput"><br>
+    <!-- This button will trigger our AJAX call -->
+    <input id="searchCity" type="submit" value="Search">
+    <div id='cities'></div>
+  </form>
+    <!--Div for the 5 day forcast-->
+  <div id="forcastDiv">
+    <div class="row">
+        <!-- 1st col -->
+        <div class="col-md-2">
         </div>
-        <div class="list-group">
-          <button type="button" class="list-group-item list-group-item-action active">
-            Dallas, TX
-          </button>
-          <button type="button" class="list-group-item list-group-item-action">Austin, TX</button>
-          <button type="button" class="list-group-item list-group-item-action">Houston, TX</button>
-          <button type="button" class="list-group-item list-group-item-action">San Antonio, TX</button>
-          <button type="button" class="list-group-item list-group-item-action" disabled>El Paso, TX</button>
+        <!-- 2nd -->
+        <div class="col-md-2" >
+        </div>
+        <!-- 3rd -->
+        <div class="col-md-2">
+        </div>
+        <!-- 4th -->
+        <div class="col-md-2">
+        </div>
+        <!-- 5th -->
+        <div class="col-md-2">
         </div>
     </div>
+  </div>
+  <!-- links -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
